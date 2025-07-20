@@ -14,4 +14,8 @@ def book_list(request):
 class library_list(DetailView):
     model = Library
     template_name = 'relationship_app/library_detail.html'
-    context_object_name =  'library'
+    def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
+        context = super().get_context_data(**kwargs)
+        library = self.get_object()
+        context['books_list'] = library.get_books_list()
+        return context
