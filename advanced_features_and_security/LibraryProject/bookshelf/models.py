@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.model import AbstractBaseUser, AbstractUser
+from django.contrib.auth.model import BaseUserManager, AbstractUser
 from django.utils.translation import gettext_lazy as _
 
 class Book(models.Model):
@@ -18,7 +18,7 @@ class CustomUser(AbstractUser):
     def __str__ (self):
         return self.username
 
-class CustomUserManager(AbstractBaseUser):
+class CustomUserManager(BaseUserManager):
     def create_user(self, username, email, password=None ):
         if not email:
             raise ValueError("User Must have an email address")
