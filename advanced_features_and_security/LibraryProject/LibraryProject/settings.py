@@ -127,4 +127,4 @@ LOGIN_URL = "login"
 LOGIN_REDIRECT_URL = "library_list"
 LOGOUT_REDIRECT_URL = "login"
 
-Auth_USER_MODEL = 'bookshelf.ModelAdmin'
+AUTH_USER_MODEL = "bookshelf.CustomUser"
