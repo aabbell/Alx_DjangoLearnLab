@@ -22,4 +22,4 @@ class CustomUserAdmin(UserAdmin):
     
     list_display = ('email', 'is_staff', 'date_of_birth', 'username')
 
-admin.site.register(CustomUser , CustomUserAdmin)
+admin.site.register(CustomUser, CustomUserAdmin)
