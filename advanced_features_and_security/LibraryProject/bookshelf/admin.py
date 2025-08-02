@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import Book,CustomUser
 
-class BookAdmin(admin.ModelAdmin):
+class CustomUserAdmin(admin.ModelAdmin):
     list_display = ('title', 'author', 'publication_year','username','email','date_of_birth','is_staff')
     list_filter = ('title', 'author', 'publication_year')
     search_fields = ('title', 'author', 'publication_year')
