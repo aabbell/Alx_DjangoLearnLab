@@ -2,12 +2,12 @@ from django.contrib import admin
 from .models import Book,CustomUser
 from django.contrib.auth.admin import UserAdmin
 
-class BookAdmin(admin.ModelAdmin):
-    list_display = ('title', 'author', 'publication_year','username','email','date_of_birth','is_staff')
-    list_filter = ('title', 'author', 'publication_year')
-    search_fields = ('title', 'author', 'publication_year')
+# class BookAdmin(admin.ModelAdmin):
+#     list_display = ('title', 'author', 'publication_year','username','email','date_of_birth','is_staff')
+#     list_filter = ('title', 'author', 'publication_year')
+#     search_fields = ('title', 'author', 'publication_year')
 
-admin.site.register(Book,BookAdmin)
+# admin.site.register(Book,BookAdmin)
 
 class CustomUserAdmin(UserAdmin):
     model = CustomUser
@@ -22,4 +22,4 @@ class CustomUserAdmin(UserAdmin):
     
     list_display = ('email', 'is_staff', 'date_of_birth', 'username')
 
-admin.site.register(CustomUser,CustomUserAdmin)
+admin.site.register(CustomUser , CustomUserAdmin)
