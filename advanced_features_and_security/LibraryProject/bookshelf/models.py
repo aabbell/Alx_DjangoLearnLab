@@ -8,7 +8,7 @@ class Book(models.Model):
     publication_year = models.IntegerField()
 
 class CustomUser(AbstractUser):
-    data_of_birth = models.DataField(null=True, blank=True)
+    date_of_birth = models.DataField(null=True, blank=True)
     profile_photo = models.ImageField(upload_to='profile_photo/', null= True)
 
     objects = CustomUserManager()
